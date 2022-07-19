@@ -2,10 +2,6 @@
   font-family: "Orbitron";
 }
 
-.sidebar {
-  width: 10%;
-}
-
 body {
   margin: 0%;
 }
@@ -214,9 +210,16 @@ html    {
     .container {
         flex-direction: column;
     }
-    ul{
+
+    .topNav {
         flex-direction: row;
         width: 100%;
-        height: ;
+        height: 100%;
+        position: relative;
+    }
+
+    ul{
+        flex-direction: column;
+        width: 100%;
     }
 }
