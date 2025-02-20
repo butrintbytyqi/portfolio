@@ -103,11 +103,6 @@ function App() {
     }
   };
 
-  // const [ref, inView] = useInView({
-  //   threshold: 0.3,
-  //   triggerOnce: true,
-  // });
-
   const skills = [
     { name: "Frontend Development", level: 90 },
     { name: "Backend Development", level: 85 },
@@ -131,22 +126,14 @@ function App() {
       category: "DevOps Tools",
       items: [
         { name: "Docker", level: 85, icon: "docker" },
-        { name: "Kubernetes", level: 80, icon: "kubernetes" },
-        // { name: "CI/CD", level: 85, icon: "cicd" },
-        // { name: "Terraform", level: 80, icon: "terraform" }
+        { name: "Kubernetes", level: 80, icon: "kubernetes" }
       ]
     }
   ];
 
   const [selectedProject, setSelectedProject] = useState(null);
   const [filter, setFilter] = useState('all');
-  // const [contactForm, setContactForm] = useState({
-  //   name: '',
-  //   email: '',
-  //   message: ''
-  // });
-  
-  const [showThankYou, setShowThankYou] = useState(false);
+  const [showThankYou] = useState(false);
 
   const projects = [
     {
@@ -250,14 +237,6 @@ function App() {
       }
     }
   };
-
-  // const handleContactSubmit = (e) => {
-  //   e.preventDefault();
-  //   // Here you would typically handle the form submission
-  //   setShowThankYou(true);
-  //   setTimeout(() => setShowThankYou(false), 3000);
-  //   setContactForm({ name: '', email: '', message: '' });
-  // };
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -621,21 +600,6 @@ function App() {
                 scalable cloud solutions. My expertise includes containerization, serverless architecture, 
                 and infrastructure as code, enabling efficient and reliable deployment pipelines.
               </Typography>
-              {/* <Button
-                variant="outlined"
-                size="large"
-                href="https://www.linkedin.com/in/butrintbytyqi"
-                target="_blank"
-                sx={{
-                  borderRadius: '30px',
-                  textTransform: 'none',
-                  fontSize: '1.1rem',
-                  py: 1.5,
-                  px: 4
-                }}
-              >
-                View Certifications
-              </Button> */}
             </Box>
           </Container>
         </Box>
@@ -792,10 +756,7 @@ function App() {
         </Box>
 
         {/* Projects Section with Filtering */}
-        <Box
-          id="projects"
-          sx={{ py: 8 }}
-        >
+        <Box id="projects" sx={{ py: 8 }}>
           <Typography variant="h2" align="center" gutterBottom>
             Projects
           </Typography>
@@ -836,24 +797,10 @@ function App() {
                     }}
                   >
                     <CardContent>
-                      <Typography 
-                        variant="h5" 
-                        gutterBottom
-                        sx={{
-                          fontWeight: 600,
-                          color: '#fff'
-                        }}
-                      >
+                      <Typography variant="h5" gutterBottom sx={{ fontWeight: 600, color: '#fff' }}>
                         {project.title}
                       </Typography>
-                      <Typography 
-                        variant="body2" 
-                        sx={{ 
-                          mb: 2,
-                          minHeight: '4.5em',
-                          color: 'rgba(255, 255, 255, 0.7)'
-                        }}
-                      >
+                      <Typography variant="body2" sx={{ mb: 2, minHeight: '4.5em', color: 'rgba(255, 255, 255, 0.7)' }}>
                         {project.description}
                       </Typography>
                       <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 3 }}>
@@ -873,14 +820,7 @@ function App() {
                           />
                         ))}
                       </Box>
-                      <Box 
-                        sx={{ 
-                          display: 'flex', 
-                          gap: 2,
-                          borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-                          pt: 2
-                        }}
-                      >
+                      <Box sx={{ display: 'flex', gap: 2, borderTop: '1px solid rgba(255, 255, 255, 0.1)', pt: 2 }}>
                         <Button
                           component="a"
                           href={project.github}
@@ -1024,14 +964,7 @@ function App() {
                     About Me
                   </Typography>
                   
-                  <Typography 
-                    variant="h5" 
-                    sx={{ 
-                      mb: 3,
-                      color: '#2196f3',
-                      fontWeight: 500
-                    }}
-                  >
+                  <Typography variant="h5" sx={{ mb: 3, color: '#2196f3', fontWeight: 500 }}>
                     Full-Stack Developer | Data Science Enthusiast | Tech Entrepreneur
                   </Typography>
 
