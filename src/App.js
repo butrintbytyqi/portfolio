@@ -1,18 +1,13 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import {
   Box,
   Container,
   Typography,
   Card,
   CardContent,
-  IconButton,
   Grid,
   Chip,
-  Tooltip,
   LinearProgress,
-  AppBar,
-  Toolbar,
-  Link,
   Button,
   Dialog,
   DialogTitle,
@@ -21,12 +16,6 @@ import {
   TextField,
   CssBaseline,
   Paper,
-  Timeline,
-  TimelineItem,
-  TimelineSeparator,
-  TimelineDot,
-  TimelineConnector,
-  TimelineContent
 } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { motion, AnimatePresence } from "framer-motion";
@@ -35,8 +24,6 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
 import WorkIcon from "@mui/icons-material/Work";
 import SchoolIcon from "@mui/icons-material/School";
 import CodeIcon from "@mui/icons-material/Code";
@@ -44,7 +31,6 @@ import StorageIcon from '@mui/icons-material/Storage';
 import CloudIcon from '@mui/icons-material/Cloud';
 import BuildIcon from '@mui/icons-material/Build';
 import SecurityIcon from '@mui/icons-material/Security';
-import { Link as ScrollLink } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
 import Tilt from "react-parallax-tilt";
 import {
