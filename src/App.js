@@ -105,10 +105,10 @@ function App() {
     }
   };
 
-  const [ref, inView] = useInView({
-    threshold: 0.3,
-    triggerOnce: true,
-  });
+  // const [ref, inView] = useInView({
+  //   threshold: 0.3,
+  //   triggerOnce: true,
+  // });
 
   const skills = [
     { name: "Frontend Development", level: 90 },
@@ -926,61 +926,6 @@ function App() {
                 </Grid>
               ))}
           </Grid>
-        </Box>
-
-        {/* Contact Form with Animation */}
-        <Box
-          id="contact"
-          sx={{ py: 8 }}
-        >
-          <Typography variant="h2" align="center" gutterBottom>
-            Contact Me
-          </Typography>
-          <Box
-            component="form"
-            onSubmit={handleContactSubmit}
-            sx={{
-              maxWidth: 600,
-              mx: 'auto',
-              p: 3,
-              background: '#1e1e1e',
-              borderRadius: 2,
-              border: '1px solid rgba(255, 255, 255, 0.1)'
-            }}
-          >
-            <TextField
-              fullWidth
-              label="Name"
-              value={contactForm.name}
-              onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-              sx={{ mb: 2 }}
-            />
-            <TextField
-              fullWidth
-              label="Email"
-              type="email"
-              value={contactForm.email}
-              onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-              sx={{ mb: 2 }}
-            />
-            <TextField
-              fullWidth
-              label="Message"
-              multiline
-              rows={4}
-              value={contactForm.message}
-              onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
-              sx={{ mb: 3 }}
-            />
-            <Button
-              type="submit"
-              variant="contained"
-              fullWidth
-              sx={{ height: 48 }}
-            >
-              Send Message
-            </Button>
-          </Box>
         </Box>
 
         {/* Project Dialog */}
