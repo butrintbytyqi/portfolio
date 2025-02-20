@@ -13,13 +13,11 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
-  TextField,
   CssBaseline,
   Paper,
 } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { motion, AnimatePresence } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
@@ -142,11 +140,12 @@ function App() {
 
   const [selectedProject, setSelectedProject] = useState(null);
   const [filter, setFilter] = useState('all');
-  const [contactForm, setContactForm] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  // const [contactForm, setContactForm] = useState({
+  //   name: '',
+  //   email: '',
+  //   message: ''
+  // });
+  
   const [showThankYou, setShowThankYou] = useState(false);
 
   const projects = [
@@ -252,13 +251,13 @@ function App() {
     }
   };
 
-  const handleContactSubmit = (e) => {
-    e.preventDefault();
-    // Here you would typically handle the form submission
-    setShowThankYou(true);
-    setTimeout(() => setShowThankYou(false), 3000);
-    setContactForm({ name: '', email: '', message: '' });
-  };
+  // const handleContactSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Here you would typically handle the form submission
+  //   setShowThankYou(true);
+  //   setTimeout(() => setShowThankYou(false), 3000);
+  //   setContactForm({ name: '', email: '', message: '' });
+  // };
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
